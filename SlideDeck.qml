@@ -13,6 +13,11 @@ Presentation {
     }
 
     Slide {
+        id: draftPlaceholder
+        centeredText: "[this is still a draft]"
+    }
+
+    Slide {
         id: titlePage
         title: "QtWayland"
         centeredText: "Creating Window Compositors with the QtWayland module"
@@ -23,7 +28,11 @@ Presentation {
     Slide {
         id: aboutMe
         title: "A little about me..."
-        //TODO: add some content about yourself
+        content: [
+            "Andy Nichols",
+            "Software Engineer at Digia",
+            "6 years of Qt experience",
+            "Former Qt Support Engineer"]
     }
 
     Slide {
@@ -39,10 +48,12 @@ Presentation {
 
     Slide {
         centeredText: "In case you have not heard..."
+        fontScale: 1.5
     }
 
     Slide {
         centeredText: "QWS has been removed in Qt 5.0"
+        fontScale: 1.5
     }
 
     Slide {
@@ -52,7 +63,10 @@ Presentation {
 
     Slide {
         title: "QWS Graphics Stack"
-        //TODO: add QWS graphics stack graphic
+        Image {
+            anchors.centerIn: parent
+            source: "QWS-Graphics.png"
+        }
     }
 
     Slide {
@@ -129,6 +143,14 @@ Presentation {
     }
 
     Slide {
+        Image {
+            id: waylandLogo
+            source: "wayland.png"
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: parent.top
+            anchors.topMargin: 25
+        }
+
         centeredText: "And then came a project called Wayland"
     }
 
@@ -155,7 +177,10 @@ Presentation {
 
     Slide {
         title: "How does Wayland work?"
-        //TODO: add Wayland Architecture Graphic
+        Image {
+            anchors.centerIn: parent
+            source: "wayland-architecture.png"
+        }
     }
 
     Slide {

@@ -13,7 +13,10 @@ OTHER_FILES += \
     ColorStrip.qml \
     DigiaFooter.png \
     devdays.png \
-    qtlogo.png
+    qtlogo.png \
+    QWS-Graphics.png \
+    wayland.png \
+    wayland-architecture.png
 
 linux-rasp-pi-g++{
     assets.path = /opt/apps/qtwayland-presentation
