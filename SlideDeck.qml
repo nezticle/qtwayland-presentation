@@ -22,7 +22,6 @@ Presentation {
         title: "QtWayland"
         centeredText: "Creating Window Compositors with the QtWayland module"
         fontScale: 1.5
-
     }
 
     Slide {
@@ -32,7 +31,16 @@ Presentation {
             "Andy Nichols",
             "Software Engineer at Digia",
             "6 years of Qt experience",
-            "Former Qt Support Engineer"]
+            "Former Qt Support Engineer"
+        ]
+        Image {
+            source: "me.png";
+            height: width;
+            width: parent.width / 4;
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.right: parent.right
+            anchors.rightMargin: 50;
+        }
     }
 
     Slide {
@@ -126,7 +134,7 @@ Presentation {
     }
 
     Slide {
-        title: "QWS does not map well with modern graphics hardware"
+        title: "Poor mapping to modern graphics hardware"
         content: [
             "OpenGL support in a QScreen driver a myth",
             " powervr driver supports OpenGL, but tread carefully",
@@ -135,7 +143,7 @@ Presentation {
     }
 
     Slide {
-        title: "QWS has an Unsustainable Maintenance burdon"
+        title: "Unsustainable Maintenance burdon"
         content: [
             "Small embedded team maintaining their own window management protocol",
             "Modernizeing QWS while maintaining compatiblity impractial"
@@ -148,7 +156,7 @@ Presentation {
             source: "wayland.png"
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: parent.top
-            anchors.topMargin: 25
+            anchors.topMargin: 15
         }
 
         centeredText: "And then came a project called Wayland"
@@ -229,14 +237,17 @@ Presentation {
 
     Slide {
         centeredText: "but the best part is..."
+        fontScale: 1.5
     }
 
     Slide {
         centeredText: "Cross toolkit compatibility!"
+        fontScale: 1.5
     }
 
     Slide {
         centeredText: "Try doing that with QWS!"
+        fontScale: 1.5
     }
 
     Slide {
@@ -248,7 +259,7 @@ Presentation {
     }
 
     Slide {
-        title: "Running Qt 5.0 Applications in a Wayland Compositor"
+        title: "Qt 5.0 Applications in a Wayland Compositor"
         content: [
             "Just add '-platform wayland' to run as a Wayland client"
         ]
@@ -256,18 +267,20 @@ Presentation {
 
     Slide {
         centeredText: "Demo Time"
+        fontScale: 1.5
     }
 
     Slide {
         centeredText: "QtCompositor API"
+        fontScale: 1.5
     }
 
     Slide {
         title: "WaylandCompositor"
         content: [
             "Subclass to create your own compositor",
-            "Implement <em>surfaceCreated(WaylandSurface *surface)</em>",
-            "Call <em>frameFinished()</em> after all surfaces are rendered."
+            "Implement <i>surfaceCreated(WaylandSurface *surface)</i>",
+            "Call <i>frameFinished()</i> after all surfaces are rendered."
         ]
     }
 
@@ -284,6 +297,7 @@ Presentation {
 
     Slide {
         centeredText: "QWindow Compositor Demo"
+        fontScale: 1.5
     }
 
     Slide {
@@ -295,6 +309,7 @@ Presentation {
 
     Slide {
         centeredText: "QML Compositor Demo"
+        fontScale: 1.5
     }
 
     Slide {
@@ -322,14 +337,32 @@ Presentation {
     }
 
     Slide {
+        title: "Extending QtWayland"
+        content: [
+        ]
+    }
+
+    Slide {
         centeredText: "Embedded Device Demo"
+        fontScale: 1.5
+    }
+
+    Slide {
+        title: "The Future of QtWayland"
+        content: [
+            "Full wayland 1.0.0 spec support",
+            "Proper client side decorations",
+            "qt-wayland-scanner"
+        ]
     }
 
     Slide {
         centeredText: "Questions?"
+        fontScale: 1.5
     }
 
     Slide {
         centeredText: "Thanks for coming!"
+        fontScale: 1.5
     }
 }

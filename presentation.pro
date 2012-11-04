@@ -4,7 +4,8 @@ TEMPLATE = app
 QT += quick
 
 SOURCES += \
-    main.cpp
+    main.cpp \
+    presentationview.cpp
 
 OTHER_FILES += \
     SlideDeck.qml \
@@ -24,3 +25,6 @@ linux-rasp-pi-g++{
     target.path = /opt/apps/qtwayland-presentation
     INSTALLS += target assets
 }
+
+HEADERS += \
+    presentationview.h
