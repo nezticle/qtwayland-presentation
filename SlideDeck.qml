@@ -65,11 +65,6 @@ Presentation {
     }
 
     Slide {
-        title: "How does QWS work in Qt 4?"
-        //TODO: add QWS architecture graphic
-    }
-
-    Slide {
         title: "QWS Graphics Stack"
         Image {
             anchors.centerIn: parent
@@ -126,7 +121,7 @@ Presentation {
     }
 
     Slide {
-        title: "QWS is infexible"
+        title: "QWS is inflexible"
         content: [
             "A lot of work to support new hardware",
             "Hard to customize"
@@ -136,9 +131,7 @@ Presentation {
     Slide {
         title: "Poor mapping to modern graphics hardware"
         content: [
-            "OpenGL support in a QScreen driver a myth",
-            " powervr driver supports OpenGL, but tread carefully",
-            " simplegl experimental driver exists, but fullscreen single window surface only."
+            "OpenGL enabled QScreen plugins exist, but have many limitations"
         ]
     }
 
@@ -339,6 +332,9 @@ Presentation {
     Slide {
         title: "Extending QtWayland"
         content: [
+            "Wayland protocol extensions",
+            "wayland-scanner tool",
+            "wayland wrappers"
         ]
     }
 
@@ -352,7 +348,8 @@ Presentation {
         content: [
             "Full wayland 1.0.0 spec support",
             "Proper client side decorations",
-            "qt-wayland-scanner"
+            "qt-wayland-scanner",
+            "Fullscreen direct rendering"
         ]
     }
 
